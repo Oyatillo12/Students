@@ -25,7 +25,7 @@ function Login() {
           localStorage.setItem('token', JSON.stringify(data))
           setTimeout(() => {
             setIsLoading(false)
-            navigate('/')
+            navigate('/dashboard')
           }, 1000)
         } else {
           setIsLoading(false)

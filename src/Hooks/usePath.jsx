@@ -1,7 +1,7 @@
 export const PATH = {
-    login:'/login',
+    login:'/',
     register:'/register',
-    home:'/',
+    home:'/dashboard',
     addStudent:"/add-student",
     profile:'/profile',
     students:'/students',

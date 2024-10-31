@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { Students, Create, Single, Home,Login,Register, Profile } from '../pages'
+import { Students, Create, Single, Home, Login, Register, Profile } from '../pages'
 import { PATH } from '../Hooks/usePath'
 
 function CustomRoutes() {

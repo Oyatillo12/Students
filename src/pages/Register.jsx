@@ -60,7 +60,7 @@ function Register() {
         </form>
         <div className='space-x-10 flex items-center '>
           <p className='text-white opacity-50 text-[16px] '>have an account?</p>
-          <Link to={'/login'} className='block text-center text-[16px] text-white w-[100px] py-3 rounded-lg bg-[#333437]'>Log in</Link>
+          <Link to={'/'} className='block text-center text-[16px] text-white w-[100px] py-3 rounded-lg bg-[#333437]'>Log in</Link>
         </div>
       </div>
       <div className='bg-[#925FE2] h-[100vh] overflow-y-auto w-[55%]'>
