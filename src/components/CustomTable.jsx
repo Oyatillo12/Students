@@ -23,5 +23,5 @@ const columns = [
     }
 ];
 
-const CustomTable = ({ data }) => <Table columns={columns} dataSource={data}/>;
+const CustomTable = ({ data, loading }) => <Table loading={loading} columns={columns} dataSource={data}/>;
 export default CustomTable;

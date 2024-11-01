@@ -4,6 +4,7 @@ import StudentsImg from '../assets/images/students.png'
 import { useFormik } from 'formik'
 import { LoginSchema } from '../validation/LoginSchema'
 import { Link, useNavigate } from 'react-router-dom'
+import toast, { Toaster } from 'react-hot-toast'
 
 
 function Register() {
@@ -22,7 +23,7 @@ function Register() {
       setIsLoading(true)
 
       if(users.some(user => user.username === data.username)) { 
-        alert('Username already exists')
+        toast.error('Username already exists')
         setIsLoading(false)
         return
       }
@@ -41,6 +42,7 @@ function Register() {
 
   return (
     <div className='flex'>
+      <Toaster position='top-center' reverseOrder={true}/>
       <div className='bg-[#1C1D21] px-[90px] h-[100vh] overflow-y-auto w-[45%] '>
         <h2 className='text-[48px]  mb-3 mt-[100px] text-white font-bold'>Sign up</h2>
         <form onSubmit={handleSubmit} className='w-[500px] mb-12 p-4 flex flex-col ' >

@@ -4,6 +4,7 @@ import StudentsImg from '../assets/images/students.png'
 import { useFormik } from 'formik'
 import { LoginSchema } from '../validation/LoginSchema'
 import { Link, useNavigate } from 'react-router-dom'
+import toast, { Toaster } from 'react-hot-toast'
 
 
 function Login() {
@@ -29,7 +30,7 @@ function Login() {
           }, 1000)
         } else {
           setIsLoading(false)
-          alert('User not found')
+          toast.error('User not found')
         }
       }
       else {
@@ -43,7 +44,7 @@ function Login() {
         }
         else {
           setIsLoading(false)
-          alert('User not found!')
+          toast.error('User not found!')
         }
       }
     },
@@ -54,6 +55,7 @@ function Login() {
 
   return (
     <div className='flex'>
+      <Toaster position='top-center' reverseOrder={false}/>
       <div className='bg-[#1C1D21] px-[90px] h-[100vh] overflow-y-auto w-[45%] '>
         <h2 className='text-[48px]  mb-3 mt-[100px] text-white font-bold'>Login</h2>
         <p className='text-[24px] mb-6 font-medium text-white opacity-70'>Enter your account details</p>
